@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+
+.madimi-one-regular {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Madimi One", "Barlow", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* padding: 10px; */
+  background: #1f1c1c;
+  cursor: url(./cursors/darkPointer.png), pointer;
+}
+
+body.light {
+  background: #c3b7b7;
+}
+
+.container {
+  position: absolute;
+  min-width: 600px;
+  min-height: 325px;
+  background: #333;
+  color: #fff;
+  padding: 30px 30px 30px;
+
+  border-radius: 20px;
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+    10px 10px 70px rgba(0, 0, 0, 0.25), inset -5px -5px 15px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.light .container {
+  background: #c3b7b7;
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.15),
+    10px 10px 70px rgba(0, 0, 0, 0.15), inset -5px -5px 15px rgba(0, 0, 0, 0.15),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.container form {
+  height: 50px;
+  width: 100%;
+
+  display: inline-block;
+  align-items: center;
+
+  position: relative;
+}
+
+form input {
+  height: 100%;
+  width: 100%;
+
+  background: #a7af7c;
+
+  height: 50px;
+
+  outline: none;
+  font-size: 20px;
+  caret-color: black;
+
+  border: 1px solid black;
+  padding: 0 120px 0 45px;
+  border-radius: 5px;
+
+  transition: all 0.1s ease;
+}
+
+.container form input[type="submit"] {
+  cursor: url(./cursors/lightPointer.png), pointer;
+
+  right: 0px;
+
+  padding: 8.5px 9px;
+  border: none;
+
+  width: 15rem;
+  height: 3.5rem;
+
+  color: #fff;
+  font-size: 18px;
+
+  outline: none;
+  /* pointer-events: none; */
+
+  position: absolute;
+  margin-top: 10px;
+  background: linear-gradient(180deg, #2f2f2f, #3f3f3f);
+  box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+    inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+
+  user-select: none;
+  /* cursor: pointer; */
+  font-weight: 400;
+  border-radius: 5px;
+}
+
+.container form input[type="submit"]:active {
+  font-size: 16px;
+  width: 235px;
+  height: 53px;
+}
+
+body.light .container form input[type="submit"] {
+  background: #c3b7b7;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 40px;
+}
+
+.registerText {
+  margin-top: 5rem;
+  padding-left: 6.5px;
+}
+
+/* Ensure the .registerText div is properly displayed */
+.registerText p {
+  margin: 0;
+}
+
+/* Add more specific styling for the link inside .registerText */
+.registerText a {
+  cursor: url(./cursors/icons8-pointer-32.png), pointer;
+  color: #fff;
+  text-decoration: underline;
+}
+
+body.light .registerText {
+  color: #333;
+}
+
+body.light .alert {
+  color: #333;
+}
+
+body.light .registerText a {
+  cursor: url(./cursors/icons8-arrow-cursor-24.png), pointer;
+  color: #333;
+}
+
+.bun {
+  cursor: url(./cursors/icons8-pointer-32.png), pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #333;
+
+  font-size: 1.5em;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25), 5px 5px 30px rgba(0, 0, 0, 0.25),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* cursor: pointer; */
+
+  border-radius: 50%;
+}
+
+body.light .bun {
+  cursor: url(./cursors/icons8-arrow-cursor-24.png), pointer;
+  background: #c3b7b7;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), 5px 5px 30px rgba(0, 0, 0, 0.05),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.1),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.bun strong {
+  display: none;
+}
+
+.bun strong:nth-child(1) {
+  display: block;
+}
+
+body.light .bun strong:nth-child(1) {
+  display: none;
+}
+
+body.light .bun strong:nth-child(2) {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .bun {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 1em;
+  }
+
+  .registerText {
+    margin-top: 9rem;
+  }
+
+  .container {
+    min-width: auto;
+    width: 90%;
+    height: 90%;
+    max-width: 300px; /* Adjust as needed */
+    max-height: 330px;
+    min-height: auto;
+    padding: 15px; /* Adjust padding as needed */
+    border-radius: 10px;
+  }
+
+  form input[type="email"],
+  form input[type="password"] {
+    padding: 15px 10px; /* Adjust padding here */
+  }
+
+  .container form input[type="submit"] {
+    width: 50%;
+    height: 90%;
+  }
+}
+
+@media screen and (max-height: 375px) {
+  .registerText {
+    margin-top: 8rem;
+  }
+
+  .form-group {
+    margin-bottom: 30px;
+  }
+
+  .container {
+    min-width: auto;
+    width: 90%;
+    height: 90%;
+    max-width: auto; /* Adjust as needed */
+    max-height: auto;
+    min-height: auto;
+    padding: 15px; /* Adjust padding as needed */
+    border-radius: 10px;
+  }
+}
